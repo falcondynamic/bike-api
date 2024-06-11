@@ -25,6 +25,6 @@ async def prediction(param1: int, param2: int, param3: str, param4: int, param5:
 
     df = pd.DataFrame.from_dict([my_dict])
 
-    prediction = rf_model.predict(df)[0]
+    prediction = int(rf_model.predict(df)[0])
 
-    return {"message": f"Prediction! {param1}, {param2}, {param3}, {param4}, {param5}, {param6} Result: {prediction}"}
+    return {"prediction": prediction, "message": "Prediction is successful!", "unit": "€"}
