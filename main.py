@@ -4,6 +4,7 @@ import pandas as pd
 
 app = FastAPI()
 
+rf_model = joblib.load('pipeline_model_rf')
 
 
 @app.get("/")
